@@ -1,13 +1,119 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background: linear-gradient(135deg, #ffffff, #d6d7d6); /* Updated gradient background */
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2, h3 {
+  margin: 5px;
+  color: #83d1ff; /* Ensuring text is visible against the background */
+}
+
+.chat-bot {
+  position: relative;
+  height: 500px;
+  width: 800px;
+  background-color: #ffffff; /* Keeping chatbot background white for contrast */
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 15px rgba(70, 255, 9, 0.2); /* Slightly more pronounced shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.chat-bot:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); /* Enhanced hover effect */
+}
+
+.info-container {
+  height: 60px;
+  background: linear-gradient(to right, #ffffff, #faeeee); /* Complementary gradient for the header */
+  padding: 20px 25px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+textarea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-top: 2px solid #ffffff; /* Lighter border for a softer look */
+  resize: none;
+  transition: background-color 0.3s ease;
+  background-color: #bfbfff; /* Light background for the textarea */
+}
+
+textarea:focus {
+  outline: none;
+  background-color: #ffffff; /* Slightly darker on focus for contrast */
+}
+
+button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff; /* Darker blue for the button */
+  color: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #67d2f0; /* A different blue on hover for visual feedback */
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 10px 15px;
+  margin: 10px 25px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #000000; /* Darker text for readability */
+  background-color: #ff0000; /* Light background for bubbles */
+  transition: transform 0.3s ease;
+
+}
+
+.bubble:hover {
+  transform: scale(1.02);
+}
+
+.question {
+  background-color: #9eb8ff; /* Light blue for questions */
+  align-self: flex-start;
+}
+
+.response {
+  background-color: #56f98f; /* White for responses */
+  align-self: flex-end;
+  margin-left: 0;
+}
+
+.chat-header, .feed {
+  overflow: hidden;
+}
+
+.feed {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+  overflow-y: auto;
+  padding: 0 20px;
 }
