@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Getting Started with PaLM 2 LLM : Create React App Chatbot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+(Getting Started with Create React App)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This project is a React-based web application that utilizes a language model API for generating responses. The front end is built with React hooks, managing states for user input, messages, and loading indicators. Additionally, the application dynamically renders mathematical typeset using MathJax.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+# Clone this repository
+$ git clone [your-repo-link]
 
-### `npm test`
+# Go into the repository
+$ cd [your-repo-directory]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Install dependencies
+$ npm install
 
-### `npm run build`
+# Run the app
+$ npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+After installation, you can start the server with `npm start:frontend` & `npm start:backend`. This will launch the React application on `localhost:3000` and the server on `localhost:8002`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Environment Variables
 
-### `npm run eject`
+Before starting the server, ensure you have set up the required environment variables:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `LANGUAGE_MODEL_API_KEY`: Your API key for the language model.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+fill in your API key in `.env` .
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Reference
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The server sets up an endpoint at `GET /prompt/:text` which interacts with the language model API to generate responses based on the provided text.
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Distributed under the MIT License. See `LICENSE` for more information.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Remember to replace placeholders like `[your-repo-link]`, `[your-repo-directory]`, and others with actual information from your project. Would you like me to write up a full README file, including the actual information based on the content of your scripts?
