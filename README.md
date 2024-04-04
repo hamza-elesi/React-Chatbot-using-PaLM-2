@@ -1,6 +1,6 @@
 # Getting Started with PaLM 2 LLM : Create React App Chatbot
 
-(Getting Started with Create React App)
+(InkoChat)
 
 ## Description
 
